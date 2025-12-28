@@ -68,6 +68,7 @@ The algorithm uses a divide-and-conquer strategy by splitting the input into eve
 
 ### Mathematical Proof of the Split
 By separating terms where $n = 2m$ (even) and $n = 2m+1$ (odd), the sum becomes:
+
 $$X[k] = \sum_{m=0}^{N/2-1} x[2m] W_{N/2}^{mk} + W_N^k \sum_{m=0}^{N/2-1} x[2m+1] W_{N/2}^{mk}$$
 
 ### The Butterfly Operation
