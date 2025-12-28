@@ -171,11 +171,11 @@ $$\text{Corrected Magnitude} = \frac{|X[k]|}{\sum w[n]} \times 2$$
 
 After computing the FFT, the raw complex numbers must be converted into physical magnitudes using the following steps:
 
-| Step | Operation | Formula / Description |
+| Step | Operation | Description |
 | :--- | :--- | :--- |
-| **Magnitude** | Absolute Value | $|X[k]| = \sqrt{\text{Re}(X[k])^2 + \text{Im}(X[k])^2}$ |
-| **Normalization** | Scaling | Divide by $N$. For $k \neq 0$, multiply by $2.0$ to account for negative frequencies. |
-| **Frequency Mapping** | Bin to Hz | $f = \frac{k \cdot f_s}{N}$ |
+| **Magnitude** | Absolute Value | Calculates the strength of each frequency by finding the magnitude of the complex result. |
+| **Normalization** | Scaling | Divides by $N$ and multiplies by $2.0$ (except for 0 Hz) to restore true physical amplitudes. |
+| **Frequency Mapping** | Bin to Hz | Maps each discrete index to its corresponding physical frequency using the sampling rate. |
 
 ---
 
